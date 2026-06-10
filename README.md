@@ -178,8 +178,6 @@ http://localhost:8501
 
 Adil Momin
 
-LinkedIn: https://linkedin.com
-
 GitHub: https://github.com/adilmomin288-hub
 
 ---
