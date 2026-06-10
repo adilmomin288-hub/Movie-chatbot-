@@ -1,83 +1,83 @@
-# 🎬 Movie Chatbot using RAG, LangChain, FAISS & Streamlit
+# 🎬 Movie Question Answer Chatbot
 
-## 📌 Project Overview
-
-This project is an AI-powered Movie Chatbot built using Retrieval-Augmented Generation (RAG), LangChain, FAISS Vector Database, OpenAI, and Streamlit.
-
-The chatbot retrieves relevant information from the IMDb Movie Dataset and provides accurate answers to user queries using semantic search and Large Language Models (LLMs).
-
----
+A Movie Question Answer Chatbot built using **LangChain, FAISS, Hugging Face, Streamlit, and Sentence Transformers**. This project uses Retrieval-Augmented Generation (RAG) to answer movie-related questions from the IMDB Movie Dataset.
 
 ## 🚀 Features
 
-* AI-powered conversational chatbot
+* Movie Question Answering
 * Retrieval-Augmented Generation (RAG)
-* Semantic search using FAISS Vector Database
-* LangChain integration
-* Streamlit web interface
-* OpenAI LLM for intelligent responses
-* IMDb movie dataset support
-* Fast and accurate information retrieval
+* Semantic Search using FAISS
+* Hugging Face LLM Integration
+* Interactive Streamlit UI
+* IMDB Movie Dataset Support
+* Fast and Accurate Movie Recommendations
+* Natural Language Responses
+* Free and Open Source
 
 ---
 
 ## 🛠️ Technologies Used
 
 * Python
-* Streamlit
 * LangChain
-* OpenAI
-* FAISS
+* FAISS Vector Database
+* Hugging Face Inference API
+* Sentence Transformers
+* Streamlit
 * Pandas
-* dotenv
+* IMDB Movie Dataset
 
 ---
 
 ## 📂 Project Structure
 
-movie-chatbot/
-
-├── app.py
-
-├── rag.py
-
-├── requirements.txt
-
-├── .env
+Movie-Chatbot/
 
 ├── data/
 
 │ └── IMDB-Movie-Data.csv
 
-└── faiss_index/
+├── vector_store/
+
+│ └── faiss_index
+
+├── app.py
+
+├── ingest.py
+
+├── requirements.txt
+
+├── .env
+
+└── README.md
 
 ---
 
 ## ⚙️ Installation
 
-### 1. Clone Repository
+### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/movie-chatbot.git
+git clone https://github.com/your-username/movie-chatbot.git
 
 cd movie-chatbot
 ```
 
-### 2. Create Virtual Environment
+### Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### 3. Activate Environment
+### Activate Virtual Environment
 
-Windows:
+Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-### 4. Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -85,62 +85,39 @@ pip install -r requirements.txt
 
 ---
 
-## 🔑 Configure API Key
+## 🔑 Environment Variables
 
-Create a `.env` file in the project root directory.
+Create a `.env` file and add:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key
+HUGGINGFACEHUB_API_TOKEN=YOUR_HUGGINGFACE_TOKEN
 ```
 
 ---
 
-## 📊 Dataset
+## 📊 Build Vector Database
 
-This project uses the IMDb Movie Dataset containing information such as:
-
-* Movie Title
-* Genre
-* Director
-* Description
-* Rating
-* Votes
-* Revenue
-
-The dataset is stored inside:
-
-```text
-data/IMDB-Movie-Data.csv
-```
-
----
-
-## 🧠 Creating FAISS Vector Database
-
-Run the following command:
+Run:
 
 ```bash
-python rag.py
+python ingest.py
 ```
 
-This will:
+Output:
 
-1. Load the IMDb dataset
-2. Generate embeddings
-3. Create FAISS vector index
-4. Save the index locally
+```text
+FAISS Index Created Successfully
+```
 
 ---
 
-## ▶️ Running the Application
-
-Start the Streamlit application:
+## ▶️ Run Application
 
 ```bash
 streamlit run app.py
 ```
 
-Open the browser:
+Application will start at:
 
 ```text
 http://localhost:8501
@@ -150,54 +127,50 @@ http://localhost:8501
 
 ## 💬 Example Questions
 
-* Who directed Interstellar?
-* What is the rating of Inception?
-* Tell me about The Dark Knight.
-* Which movie has the highest rating?
-* Show movies directed by Christopher Nolan.
+* Tell me about Interstellar
+* Who directed Inception?
+* Recommend thriller movies
+* Best action movies
+* Movies starring Leonardo DiCaprio
+* Top rated sci-fi movies
+* Best drama movies
+* Movies released in 2016
 
 ---
 
-## 🔄 RAG Workflow
+## 🧠 How It Works
 
-User Query
-
-↓
-
-Streamlit Interface
-
-↓
-
-LangChain Retriever
-
-↓
-
-FAISS Similarity Search
-
-↓
-
-Relevant Context Retrieved
-
-↓
-
-OpenAI LLM
-
-↓
-
-Final Response
+1. IMDB dataset is loaded.
+2. Text data is converted into embeddings.
+3. Embeddings are stored in FAISS.
+4. User asks a question.
+5. Relevant movie information is retrieved.
+6. Hugging Face LLM generates a natural language response.
+7. Streamlit displays the answer.
 
 ---
 
 ## 📈 Future Enhancements
 
-* PDF Document Support
-* Chat History
+* Movie Posters Integration
 * User Authentication
-* Multi-file Knowledge Base
-* HuggingFace Embeddings
-* Groq Integration
-* Cloud Deployment
+* Chat History
+* Genre-Based Recommendations
 * Voice Assistant Support
+* Multi-Language Support
+* Advanced LLM Models
+
+---
+
+## 🎯 Learning Outcomes
+
+* Retrieval-Augmented Generation (RAG)
+* Vector Databases
+* LangChain Framework
+* Semantic Search
+* LLM Integration
+* Streamlit Deployment
+* End-to-End AI Application Development
 
 ---
 
@@ -205,10 +178,14 @@ Final Response
 
 Adil Momin
 
-Cyber Security & AI Enthusiast
+LinkedIn: https://linkedin.com
+
+GitHub: https://github.com/adilmomin288-hub
 
 ---
 
-## 📜 License
+## ⭐ Support
 
-This project is developed for educational and learning purposes.
+If you found this project useful, please give it a star on GitHub and share it with others.
+
+Thank You!
